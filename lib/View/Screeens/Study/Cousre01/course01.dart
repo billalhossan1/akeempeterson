@@ -29,7 +29,7 @@ class _CourseOneState extends State<CourseOne> {
           },
           icon: SvgPicture.asset(AppIcons.studybackbutton),
         ),
-        title: CustomText(
+        title: const CustomText(
           text: AppString.studypageappbartitle,
           fontSize: 18,
           fontWeight: FontWeight.w500,
@@ -44,8 +44,8 @@ class _CourseOneState extends State<CourseOne> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 15),
-              CustomText(
+              const SizedBox(height: 15),
+              const CustomText(
                 text: AppString.courseOneHeading,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -53,7 +53,7 @@ class _CourseOneState extends State<CourseOne> {
                 maxLines: 3,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ...List.generate(
                 5,
                 (index) {
@@ -73,13 +73,13 @@ class _CourseOneState extends State<CourseOne> {
                         'Brainstorming Basics',
                       ],
                       onTap: () {
-                        Get.to(() => CourseOneVideoSection());
+                        // Get.to(() => CourseOneVideoSection());
                       },
                     ),
                   );
                 },
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
         ),
