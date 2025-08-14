@@ -19,7 +19,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final LoginController controller = Get.find<LoginController>();
+  final LoginController controller = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -33,14 +33,14 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomText(
+            const CustomText(
               text: AppString.welcomeback,
               color: AppColors.primary700,
               fontSize: 26,
               fontWeight: FontWeight.w600,
             ),
             SizedBox(height: 12.h),
-            CustomText(
+            const CustomText(
               text: AppString.putInformationtoSignin,
               color: AppColors.black800,
               fontWeight: FontWeight.w600,
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                         fillColor: WidgetStateProperty.all(AppColors.white100),
                         checkColor: AppColors.blue700,
                       ),
-                      CustomText(
+                      const CustomText(
                         text: AppString.rememberme,
                         color: AppColors.black500,
                         fontSize: 14,
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: () {
                     Get.to(() => ForgotPasswordPage()); // Pass email
                   },
-                  child: CustomText(
+                  child: const CustomText(
                     text: AppString.forghotpass,
                     color: AppColors.black400,
                     fontSize: 14,
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomText(
+                const CustomText(
                   text: AppString.donthaveAccount,
                   color: AppColors.black400,
                   fontSize: 14,
@@ -128,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 TextButton(
                   onPressed: () => Get.to(() => SiginUpPage()),
-                  child: CustomText(
+                  child: const CustomText(
                     text: AppString.createAccount,
                     color: AppColors.blue500,
                     fontSize: 14,
@@ -138,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             SizedBox(height: 30.h),
-            Row(
+            const Row(
               children: [
                 Expanded(
                     child: Divider(color: AppColors.black400, thickness: 1.0)),
