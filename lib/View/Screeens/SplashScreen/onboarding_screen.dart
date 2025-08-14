@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:frist_project/Core/AppRoute/app_route.dart';
 import 'package:frist_project/Utils/AppImg/app_images.dart';
 import 'package:frist_project/Utils/StaticString/static_string.dart';
 import 'package:frist_project/View/Screeens/LoginSignUP/home_login_signup.dart';
@@ -130,7 +131,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomButton(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => const HomePage());
+                        },
                         title: "Skip",
                         textColor: AppColors.black800,
                         height: 36.h,
